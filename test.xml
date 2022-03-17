@@ -18,12 +18,6 @@
                         <email_type>work</email_type>
                     </email_types>
                 </email>
-                <email>
-                    <email_address>school_yuxi.peng@stud.aho.no</email_address>
-                    <email_types>
-                        <email_type>school</email_type>
-                    </email_types>
-                </email>
             </emails>
         </contact_info>
         <user_identifiers>
@@ -56,12 +50,12 @@
                         <email_type>work</email_type>
                     </email_types>
                 </email>
-<!--                <email>-->
-<!--                    <email_address>peder-school@stud.aho.no</email_address>-->
-<!--                    <email_types>-->
-<!--                        <email_type>school</email_type>-->
-<!--                    </email_types>-->
-<!--                </email>-->
+                <email>
+                    <email_address>peder-school@stud.aho.no</email_address>
+                    <email_types>
+                        <email_type>SChOOL</email_type>
+                    </email_types>
+                </email>
 
             </emails>
 
