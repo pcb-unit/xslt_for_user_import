@@ -11,13 +11,27 @@
     <xsl:template match="user_identifiers">
         <xsl:copy>
             <xsl:apply-templates/>
-            <user_identifier>
-                <id_type>PCB</id_type>
-                <value>
-                    <xsl:value-of
-                            select="../contact_info/emails/email[contains(email_types/email_type, 'school')]/email_address "/>
-                </value>
-            </user_identifier>
+            <xsl:choose>
+                <xsl:when test="../contact_info/emails/email[contains(email_types/email_type, 'school')]">
+                    <user_identifier>
+                        <id_type>OTHER_ID_1</id_type>
+                        <value>
+                            <xsl:value-of
+                                    select="../contact_info/emails/email[contains(email_types/email_type, 'school')]/email_address "/>
+                        </value>
+                    </user_identifier>
+                </xsl:when>
+                <xsl:when test="../contact_info/emails/email[contains(email_types/email_type, 'work')]">
+                    <user_identifier>
+                        <id_type>OTHER_ID_1</id_type>
+                        <value>
+
+                            <xsl:value-of
+                                    select="../contact_info/emails/email[contains(email_types/email_type, 'work')]/email_address "/>
+                        </value>
+                    </user_identifier>
+                </xsl:when>
+            </xsl:choose>
         </xsl:copy>
     </xsl:template>
 
